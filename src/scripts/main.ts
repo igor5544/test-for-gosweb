@@ -1,4 +1,4 @@
-import { renderHeader } from './render';
+import { renderHeader } from '../blocks/header/header';
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = document.getElementById('app');
