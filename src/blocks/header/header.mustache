@@ -1,17 +1,21 @@
 <header class="header">
     <div class="header__top">
-        <h1>Header</h1>
+        <div class="header__top-inner container">
+            <h1>Header</h1>
+        </div>
     </div>
 
     <div class="header__bottom">
-        <nav class="nav">
-            <ul class="nav__list">
-                {{#navItems}}
-                    <li class="nav__item">
-                        <a href="{{url}}" class="nav__link">{{title}}</a>
-                    </li>
-                {{/navItems}}
-            </ul>
-        </nav>
+        <div class="header__bottom-inner container">
+            <nav class="nav">
+                <ul class="nav__list">
+                    {{#navItems}}
+                        <li class="nav__item">
+                            <a href="{{url}}" class="nav__link  {{#isActive}}nav__link--active{{/isActive}}">{{title}}</a>
+                        </li>
+                    {{/navItems}}
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>

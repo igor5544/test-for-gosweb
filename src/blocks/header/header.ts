@@ -7,21 +7,22 @@ export function renderHeader(): Promise<string> {
             {
                 url: '/',
                 title: 'LISP',
+                isActive: true,
             },
             {
-                url: '/',
+                url: '/OCaml',
                 title: 'OCaml',
             },
             {
-                url: '/',
+                url: '/JavaScript',
                 title: 'JavaScript',
             },
             {
-                url: '/',
+                url: '/Python',
                 title: 'Python',
             },
             {
-                url: '/',
+                url: '/PHP',
                 title: 'PHP',
             },
         ],
