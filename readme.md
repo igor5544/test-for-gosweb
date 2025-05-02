@@ -26,3 +26,9 @@ npm ci
 - `npm run dev`: Запуск dev-сервера
 - `npm run build`: Production-сборка
 - `npm run preview`: Локальный просмотр сборки
+
+## Автоматический деплой
+
+Сайт автоматически публикуется на **GitHub Pages** при:
+- Прямом пуше в ветку `master`
+- Мердже Pull Request в `master`
