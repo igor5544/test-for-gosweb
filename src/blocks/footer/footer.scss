@@ -1,0 +1,83 @@
+@use '../../styles/vars' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  padding: 50px 0 60px 0;
+  background-color: $main-bg-accent-color;
+  border-top: 1px solid #d8d8d4;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+  }
+
+  &__main-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px ;
+    border-bottom: 1px solid #d9d9d4;
+    padding-bottom: 42px;
+  }
+
+  &__links {
+    flex: 1;
+  }
+
+  &__right-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    gap: 48px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__description-link {
+    @include main-effect;
+    text-decoration: none;
+    color: $text-color-main;
+  }
+}
+
+.features {
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 14px;
+  }
+
+  &__icon {
+    position: absolute;
+    height: 50%;
+    right: 100%;
+    transform: translateY(50%);
+  }
+}
+
+.social-links {
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link {
+    @include main-effect;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+  }
+}

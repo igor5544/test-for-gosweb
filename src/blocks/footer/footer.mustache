@@ -1,0 +1,51 @@
+<footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__main-info-wrapper">
+            <div class="footer__links"></div>
+
+            <div class="footer__right-blocks">
+                <div class="features">
+                    <ul class="features__list">
+                        {{#features}}
+                            <li class="features__item">
+                                <img
+                                    class="features__icon"
+                                    alt="{{icon.alt}}"
+                                    src="{{baseAssetsUrl}}{{icon.url}}"
+                                    height="{{icon.height}}"
+                                    width="{{icon.width}}"
+                                />
+
+                                <p>{{title}}</p>
+                            </li>
+                        {{/features}}
+                    </ul>
+                </div>
+
+                <div class="social-links">
+                    <ul class="social-links__list">
+                        {{#socialLinks}}
+                            <li class="social-links__item">
+                                <a href="{{url}}" class="social-links__link">
+                                    <img
+                                         alt="{{icon.alt}}"
+                                         src="{{baseAssetsUrl}}{{icon.url}}"
+                                         height="{{icon.height}}"
+                                         width="{{icon.width}}"
+                                    />
+                                </a>
+                            </li>
+                        {{/socialLinks}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__description-wrapper">
+            <p class="footer__description">
+                2005-2017 © <a class="footer__description-link" href="/" target="_blank">7h35h0p.ru</a> — модный интернет-магазин одежды, обуви и аксессуаров. <br/>
+                Все права защищены. Доставка по всей России!
+            </p>
+        </div>
+    </div>
+</footer>

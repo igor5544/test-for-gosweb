@@ -1,4 +1,6 @@
 @use '../blocks/header/header';
+@use '../blocks/main/main';
+@use '../blocks/footer/footer';
 @use './vars' as *;
 
 html {
@@ -16,7 +18,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: $main-font;
-  color: $text-color--main;
+  color: $text-color-main;
   line-height: 16px;
   font-size: 16px;
   font-weight: 400;
@@ -25,6 +27,12 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {

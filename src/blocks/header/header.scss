@@ -22,7 +22,7 @@
     border: 1px solid #d8d8d4;
     border-right: none;
     border-left: none;
-    background-color: #f2f2ee;
+    background-color: $main-bg-accent-color;
   }
 
   &__bottom-inner {
@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+    padding: 6px 0;
   }
 
   &__search-input {
@@ -51,8 +52,7 @@
 
 .nav {
   &__list {
-    padding: 0;
-    list-style: none;
+    @include reset-list;
     display: flex;
     gap: 14px;
   }
@@ -63,7 +63,7 @@
     color: $accent-color;
 
     &--active {
-      color: $text-color--main;
+      color: $text-color-main;
       text-decoration: none;
       font-weight: 600;
     }
