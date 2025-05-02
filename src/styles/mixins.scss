@@ -1,0 +1,11 @@
+@mixin main-effect {
+  transition: all .1s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

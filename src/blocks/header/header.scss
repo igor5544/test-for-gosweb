@@ -1,11 +1,51 @@
 @use '../../styles/vars' as *;
+@use '../../styles/mixins' as *;
 
 .header {
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 18px 0 14px 1px;
+  }
+
+  &__phone-link {
+    @include main-effect;
+    font-size: 24px;
+    font-weight: 600;
+    color: $accent-color;
+    text-decoration: none;
+  }
+
   &__bottom {
     border: 1px solid #d8d8d4;
     border-right: none;
     border-left: none;
     background-color: #f2f2ee;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  &__search-input {
+    border: 1px solid #d9d9d3;
+    height: 38px;
+    width: 278px;
+    padding: 0 8px;
+    background-image: url('@icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: right 9px center;
+    background-size: 15px;
+
+    &:focus {
+      background-image: none;
+    }
   }
 }
 
@@ -17,26 +57,15 @@
     gap: 14px;
   }
 
-  &__item {
-    padding: 3px;
-  }
-
   &__link {
+    @include main-effect;
+    padding: 3px;
     color: $accent-color;
-    transition: all .1s;
 
     &--active {
       color: $text-color--main;
       text-decoration: none;
       font-weight: 600;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.6;
     }
   }
 }

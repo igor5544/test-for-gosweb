@@ -12,4 +12,10 @@ export default defineConfig({
             },
         },
     },
+    resolve: {
+        alias: {
+            '@icons': './src/assets/icons',
+            '@images': './src/assets/images',
+        },
+    },
 });

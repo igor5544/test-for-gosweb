@@ -1,21 +1,39 @@
 <header class="header">
     <div class="header__top">
         <div class="header__top-inner container">
-            <h1>Header</h1>
+            <div class="header__logo-wrapper">
+                <a href="/" class="header__logo-link">
+                    <img class="header__logo-icon" src="./src/assets/icons/the_shop_logo.svg" width="104px" height="22px"  alt="7h3 5h0p">
+                </a>
+            </div>
+
+            <div class="header__second-logo-wrapper">
+                <img class="header__logo-icon" src="./src/assets/icons/oggetto_logo.svg"  width="48px" height="50px" alt="oggetto logo">
+            </div>
+
+            <div class="header__contacts-wrapper">
+                <a class="header__phone-link" href="tel:+78122128506">+7 (812) 2•12•85•06</a>
+            </div>
         </div>
     </div>
 
     <div class="header__bottom">
         <div class="header__bottom-inner container">
-            <nav class="nav">
-                <ul class="nav__list">
-                    {{#navItems}}
-                        <li class="nav__item">
-                            <a href="{{url}}" class="nav__link  {{#isActive}}nav__link--active{{/isActive}}">{{title}}</a>
-                        </li>
-                    {{/navItems}}
-                </ul>
-            </nav>
+            <div class="header__nav-wrapper">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        {{#navItems}}
+                            <li class="nav__item">
+                                <a href="{{url}}" class="nav__link  {{#isActive}}nav__link--active{{/isActive}}">{{title}}</a>
+                            </li>
+                        {{/navItems}}
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__search-wrapper">
+                <input class="header__search-input" type="search" />
+            </div>
         </div>
     </div>
 </header>
