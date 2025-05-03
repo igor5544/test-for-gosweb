@@ -6,8 +6,8 @@
                     <li class="breadcrumbs__item">
                         {{^isActive}}
                             <a
-                               href="{{url}}"
-                               class="breadcrumbs__link"
+                                    href="{{url}}"
+                                    class="breadcrumbs__link"
                             >
                                 {{title}}
                             </a>
@@ -25,11 +25,11 @@
         <section class="product">
             <div class="product__view">
                 <img
-                    class="product__img"
-                    width="700px"
-                    height="700px"
-                    alt="футболка"
-                    src="{{baseAssetsUrl}}/assets/images/tshirt_white.jpg"
+                        class="product__img"
+                        width="700px"
+                        height="700px"
+                        alt="футболка"
+                        src="{{baseAssetsUrl}}/assets/images/tshirt_white.jpg"
                 />
             </div>
 
@@ -45,6 +45,56 @@
                 <span class="product__price">
                     1500₽
                 </span>
+
+                <fieldset class="product__fieldset">
+                    <legend class="product__legend">Размер:</legend>
+                    <div class="product__radio-wrapper">
+                        {{#product.sizes}}
+                            <input
+                                    class="product__radio-input"
+                                    type="radio"
+                                    name="size"
+                                    value="{{title}}"
+                                    id="{{title}}"
+                                    {{#isSelected}}checked{{/isSelected}}
+                            />
+                            <label class="product__radio-label" for="{{title}}">
+                                {{title}}
+                            </label>
+                        {{/product.sizes}}
+                    </div>
+                </fieldset>
+
+                <fieldset class="product__fieldset">
+                    <legend class="product__legend">Цвет:</legend>
+                    <div class="product__radio-wrapper color-radio">
+                        {{#product.colors}}
+                            <input
+                                    class="color-radio__input product__radio-input"
+                                    type="radio"
+                                    name="color"
+                                    value="{{value}}"
+                                    id="{{value}}"
+                                    {{#isSelected}}checked{{/isSelected}}
+                            />
+                            <label
+                                    class="color-radio__label product__radio-label"
+                                    for="{{value}}"
+                                    style="background-color: {{color}}"
+                            >
+                                {{value}}
+                            </label>
+                        {{/product.colors}}
+                    </div>
+                </fieldset>
+
+                <button class="product__buy-button">
+                    Купить
+                </button>
+
+                <button class="product__postpone-button">
+                    Отложить на потом
+                </button>
             </div>
         </section>
     </div>

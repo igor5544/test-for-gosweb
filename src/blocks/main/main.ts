@@ -18,6 +18,35 @@ const data: MainTemplateData = {
             isActive: true,
         },
     ],
+    product: {
+        sizes: [
+            {
+                title: 'S',
+            },
+            {
+                title: 'M',
+                isSelected: true,
+            },
+            {
+                title: 'L',
+            },
+        ],
+        colors: [
+            {
+                color: '#fff9fa',
+                value: 'white',
+                isSelected: true,
+            },
+            {
+                color: '#e3d95d',
+                value: 'yellow',
+            },
+            {
+                color: '#a5af95',
+                value: 'green',
+            },
+        ],
+    },
 };
 
 export function renderMain(): Promise<string> {
