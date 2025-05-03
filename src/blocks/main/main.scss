@@ -1,3 +1,52 @@
+@use '../../styles/vars' as *;
+@use '../../styles/mixins' as *;
+
 .main {
   flex-grow: 1;
+  padding: 46px 0 120px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+  }
+
+  &__link {
+    @include main-effect;
+    position: relative;
+    color: $accent-color;
+    padding-right: 10px;
+
+    &::after {
+      position: absolute;
+      content: '/';
+      right: 0;
+      color: $text-color-main;
+    }
+  }
+}
+
+.product {
+  display: flex;
+  column-gap: 60px;
+  justify-content: space-between;
+
+  &__data {
+    flex-grow: 1;
+  }
+
+  &__price {
+    font-size: 36px;
+    font-weight: 600;
+    color: $accent-color;
+  }
 }
