@@ -3,6 +3,78 @@ import footerTemplate from './footer.mustache?raw';
 import { FooterTemplateData } from './types';
 
 const data: FooterTemplateData = {
+    linksBlocks: [
+        {
+            blockTitle: 'Сервис и поддержка',
+            links: [
+                {
+                    url: '/',
+                    title: 'Как сделать заказ',
+                },
+                {
+                    url: '/',
+                    title: 'Способы оплаты',
+                },
+                {
+                    url: '/',
+                    title: 'Возврат товара',
+                },
+                {
+                    url: '/',
+                    title: 'Правила продажи',
+                },
+                {
+                    url: '/',
+                    title: 'Публичная оферта',
+                },
+                {
+                    url: '/',
+                    title: 'Возврат денежных средств',
+                },
+                {
+                    url: '/',
+                    title: 'Доставка',
+                },
+                {
+                    url: '/',
+                    title: 'Вопросы и ответы',
+                },
+            ],
+        },
+        {
+            blockTitle: 'О компании',
+            links: [
+                {
+                    url: '/',
+                    title: 'О нас',
+                },
+                {
+                    url: '/',
+                    title: 'Сертификаты',
+                },
+                {
+                    url: '/',
+                    title: 'Контакты',
+                },
+                {
+                    url: '/',
+                    title: 'Преимущества',
+                },
+                {
+                    url: '/',
+                    title: 'Вакансии',
+                },
+                {
+                    url: '/',
+                    title: 'Наши скидки',
+                },
+                {
+                    url: '/',
+                    title: 'Партнерам',
+                },
+            ],
+        },
+    ],
     features: [
         {
             title: 'бесплатная доставка от 4000 ₽',

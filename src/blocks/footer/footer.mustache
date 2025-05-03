@@ -1,7 +1,21 @@
 <footer class="footer">
     <div class="footer__inner container">
         <div class="footer__main-info-wrapper">
-            <div class="footer__links"></div>
+            <div class="footer__links">
+                {{#linksBlocks}}
+                    <div class="linksBlock">
+                        <h2>{{blockTitle}}</h2>
+
+                        <ul class="linksBlock__list">
+                            {{#links}}
+                                <li class="linksBlock__item">
+                                    <a href="{{url}}" class="linksBlock__link">{{title}}</a>
+                                </li>
+                            {{/links}}
+                        </ul>
+                    </div>
+                {{/linksBlocks}}
+            </div>
 
             <div class="footer__right-blocks">
                 <div class="features">

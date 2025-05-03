@@ -21,7 +21,10 @@
   }
 
   &__links {
+    display: flex;
+    gap: 60px;
     flex: 1;
+    flex-grow: 1.5;
   }
 
   &__right-blocks {
@@ -38,6 +41,29 @@
 
   &__description-link {
     @include main-effect;
+    text-decoration: none;
+    color: $text-color-main;
+  }
+}
+
+.linksBlock {
+  flex: 1;
+
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4px;
+    row-gap: 10px;
+  }
+
+  &__item {
+    flex-basis: calc(50% - 4px);
+  }
+
+  &__link {
+    @include main-effect;
+    font-size: 14px;
     text-decoration: none;
     color: $text-color-main;
   }
