@@ -48,7 +48,16 @@ h2 {
 }
 
 .container {
-  max-width: $desktop-width;
+  max-width: calc($desktop-width + 30px);
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: $mobile-width) {
+  h1 {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }

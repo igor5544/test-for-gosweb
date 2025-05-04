@@ -132,6 +132,43 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .product {
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__view {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__buy-button {
+      flex-basis: 100%;
+    }
+
+    &__postpone-button {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .product {
+    &__img {
+      min-width: auto;
+    }
+
+    &__postpone-button {
+      margin-right: auto;
+    }
+  }
+}
+
 .color-radio {
   &__label {
     font-size: 0;
