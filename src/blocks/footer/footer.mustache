@@ -4,7 +4,7 @@
             <div class="footer__links">
                 {{#linksBlocks}}
                     <div class="linksBlock">
-                        <h2>{{blockTitle}}</h2>
+                        <h2 class="linksBlock__title">{{blockTitle}}</h2>
 
                         <ul class="linksBlock__list">
                             {{#links}}
@@ -30,7 +30,7 @@
                                         width="{{icon.width}}"
                                 />
 
-                                <p>{{title}}</p>
+                                <p class="features__text">{{title}}</p>
                             </li>
                         {{/features}}
                     </ul>

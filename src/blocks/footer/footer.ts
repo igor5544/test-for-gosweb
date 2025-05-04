@@ -110,8 +110,8 @@ const data: FooterTemplateData = {
             icon: {
                 alt: 'facebook',
                 url: '/assets/icons/facebook.svg',
-                height: '22px',
-                width: '18px',
+                height: '18px',
+                width: '14px',
             },
         },
         {
@@ -119,8 +119,8 @@ const data: FooterTemplateData = {
             icon: {
                 alt: 'twitter',
                 url: '/assets/icons/twitter.svg',
-                height: '30px',
-                width: '35px',
+                height: '26px',
+                width: '32px',
             },
         },
         {
@@ -129,12 +129,12 @@ const data: FooterTemplateData = {
                 alt: 'instagram',
                 url: '/assets/icons/instagram.svg',
                 height: '32px',
-                width: '34px',
+                width: '32px',
             },
         },
     ],
 };
 
-export function renderFooter(): Promise<string> {
-    return renderTemplate(footerTemplate, data);
+export function renderFooter(): void {
+    renderTemplate(footerTemplate, data);
 }

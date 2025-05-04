@@ -28,6 +28,6 @@ const data: HeaderTemplateData = {
     ],
 };
 
-export function renderHeader(): Promise<string> {
-    return renderTemplate(headerTemplate, data);
+export function renderHeader(): void {
+    renderTemplate(headerTemplate, data);
 }

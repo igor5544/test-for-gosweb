@@ -3,7 +3,7 @@
 
 .main {
   flex-grow: 1;
-  padding: 46px 0 120px 0;
+  padding: 49px 0 122px 0;
 
   &__inner {
     display: flex;
@@ -37,15 +37,23 @@
 
 .product {
   display: flex;
-  column-gap: 60px;
+  column-gap: 63px;
   justify-content: space-between;
+
+  &__img {
+    min-width: 700px;
+  }
 
   &__data {
     flex-grow: 1;
   }
 
+  &__title {
+    margin-bottom: 20px;
+  }
+
   &__description {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
   &__price {
@@ -53,7 +61,7 @@
     font-size: 36px;
     font-weight: 600;
     color: $accent-color;
-    margin-bottom: 32px;
+    margin-bottom: 38px;
   }
 
   &__fieldset {
@@ -106,7 +114,7 @@
     @include main-effect;
     position: relative;
     display: block;
-    padding: 6px 12px 6px 30px;
+    padding: 8px 20px 7px 37px;
     background-color: transparent;
     text-decoration: underline;
     color: #b3b3b3;
@@ -114,8 +122,8 @@
 
     &::before {
       position: absolute;
-      content: url('@icons/heart.svg');
-      width: 22px;
+      content: url('@icons/filled-heart.svg');
+      width: 28px;
       height: 20px;
       left: 0;
       top: 50%;

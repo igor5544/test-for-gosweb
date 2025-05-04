@@ -1,4 +1,5 @@
 import { renderTemplate } from '../../scripts/render';
+import { FullTemplateData } from '../../types/mustacheTemplate';
 import mainTemplate from './main.mustache?raw';
 import { MainTemplateData } from './types';
 
@@ -49,6 +50,30 @@ const data: MainTemplateData = {
     },
 };
 
-export function renderMain(): Promise<string> {
-    return renderTemplate(mainTemplate, data);
+const addFormEventListener = ({ baseAssetsUrl }: FullTemplateData<MainTemplateData>): void => {
+    const mainElement = document.querySelector('.main');
+    const productFormElement = mainElement?.querySelector('.product__form');
+    if (productFormElement) {
+        productFormElement.addEventListener('change', (event) => {
+            const targetElement = event.target as HTMLElement;
+            if (targetElement.classList.contains('color-radio__input')) {
+                const colorRadioValue = (event.target as HTMLInputElement).value;
+                const productImage = mainElement?.querySelector('.product__img');
+
+                if (productImage) {
+                    (productImage as HTMLImageElement).src =
+                        `${baseAssetsUrl}/assets/images/tshirt_${colorRadioValue}.jpg`;
+                }
+            }
+        });
+    }
+};
+
+const mainAddEventsListeners = (fullTemplateData: FullTemplateData<MainTemplateData>): void => {
+    addFormEventListener(fullTemplateData);
+};
+
+export function renderMain(): void {
+    const fullTemplateData = renderTemplate(mainTemplate, data);
+    mainAddEventsListeners(fullTemplateData);
 }
